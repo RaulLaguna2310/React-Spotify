@@ -6,19 +6,11 @@ import Main from "./components/Main"
 import SideBar from "./components/SideBar"
 import { useEffect } from "react"
 import artista from "../server/models/Artista"
+import { Outlet } from "react-router-dom"
 
 function App() {
 
-    const [artistas, setArtistas] = useState([])
-
-    useEffect(() => {
-      fetch('http://localhost:3000/artistas')
-      .then( res => res.json())
-      .then(res => setArtistas(res))
-      .catch( err => console.log(err))
-      .finally(() => console.log("Acabou >) "))
-
-    }, [])
+    
 
   return (
 
@@ -30,19 +22,7 @@ function App() {
           <CardSideBar/>
           <CardSideBar/>
         </SideBar>
-        <Main>
-          <h1> Gênero Pura </h1>
-          {
-            artistas
-            .filter(artista => artista.genero === "rap")
-           .map(artista => (
-            <div className="bg-red-500 w-28 h-28 flex flex-col justify-around items-center">
-          <p>{artista.name}</p>
-          </div>
-           )) 
-          }
-        
-        </Main>
+          <Outlet/>
       </Container>
         
       
