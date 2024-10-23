@@ -15,12 +15,12 @@ app.use(cors(), express.json());
      console.log('Conectando no MongoDB')
  })
 
-app.get("/artistas", async (req, res) => {
+app.get("/Artistas", async (req, res) => {
     const listaArtistas = await artista.find({});
     res.status(200).json(listaArtistas)
 });
 
-app.get("/artistas/:id", async (req, res) => {
+app.get("/Artistas/:id", async (req, res) => {
     const artistas = await artista.findById(req.params.id);
     res.status(200).json(artistas)
 });

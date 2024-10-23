@@ -7,6 +7,6 @@ const artistaSchema = new mongoose.Schema({
     descricao: {type: String},
 });
 
-const artista = mongoose.model('artistas', artistaSchema)
+const artista = mongoose.model('Artistas', artistaSchema)
 
 export default artista

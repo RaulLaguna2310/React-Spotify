@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     element: <App/>,
     children: [
       {index: true, element: <Main/>},
-      {path: '/artistas/:id', element: <Artista/>},
+      {path: '/Artistas/:id', element: <Artista/>},
       {path: '*', element: <h1>PageNotFound</h1> }
       
     ]
