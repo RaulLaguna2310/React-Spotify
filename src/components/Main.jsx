@@ -17,9 +17,9 @@ export default function Main({children}){
         <div className="bg-gray-400 w-3/4 grid grid-cols-4 pl-20 items-center">
           <h1> Gênero Pura </h1>
           {artistas
-          .filter(artista => artista.genero === "rap")
+          // .filter(artista => artista.genero === "rap")
            .map(artista => (
-          <Link to={`artistas/${_id}`}>
+          <Link to={`artistas/${artista._id}`}>
             <div className="bg-red-500 w-28 h-28 flex flex-col justify-around items-center">
           <p>{artista.name}</p>
           </div>
