@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 export default function Main({children}){
 
@@ -18,9 +19,12 @@ export default function Main({children}){
           {artistas
           .filter(artista => artista.genero === "rap")
            .map(artista => (
+          <Link to={`artistas/${_id}`}>
             <div className="bg-red-500 w-28 h-28 flex flex-col justify-around items-center">
           <p>{artista.name}</p>
           </div>
+          </Link>
+            
            )) 
           }
         </div>
