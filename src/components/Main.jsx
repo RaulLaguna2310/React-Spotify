@@ -14,10 +14,10 @@ export default function Main({ children, capa }) {
 
   return (
     <>
-      <div className="bg-cl_bg w-full h-full flex flex-col font-mono">
+      <div className="bg-cl_bg w-full h-full flex flex-col font-mono py-8 px-12">
         <div className="mb-10">
           <h1 className="text-white font-semibold text-xl py-8 px-10"> Rock </h1>
-          <div className="grid grid-cols-6">
+          <div className="grid grid-cols-4">
             {artistas
               .filter((artista) => artista.genero === "rock")
               .map((artista) => (
@@ -35,7 +35,7 @@ export default function Main({ children, capa }) {
           
         <div className="mb-10">
           <h1 className="text-white  font-semibold text-xl py-8 px-10"> Rap </h1>
-          <div className="grid grid-cols-6">
+          <div className="grid grid-cols-4">
             {artistas
               .filter((artista) => artista.genero === "rap")
               .map((artista) => (
@@ -53,7 +53,7 @@ export default function Main({ children, capa }) {
 
         <div className="mb-10">
           <h1 className="text-white  font-semibold text-xl py-8 px-10"> Pop </h1>
-          <div className="grid grid-cols-6">
+          <div className="grid grid-cols-4">
             {artistas
               .filter((artista) => artista.genero === "pop")
               .map((artista) => (
