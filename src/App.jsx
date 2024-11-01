@@ -19,8 +19,6 @@ function App() {
      <Container>
         <SideBar>
           <CardSideBar/>
-          <CardSideBar/>
-          <CardSideBar/>
         </SideBar>
           <Outlet/>
       </Container>
