@@ -5,7 +5,7 @@ export default function Main({ children, capa }) {
   const [artistas, setArtistas] = useState([]);
 
   useEffect(() => {
-    fetch("https://react-spotify-dl9h-k8be8azut-raul-s-projects-4b98cd39.vercel.app/artistas")
+    fetch("https://spotify-deploy-api.vercel.app/artistas")
       .then((res) => res.json())
       .then((res) => setArtistas(res))
       .catch((err) => console.log(err))
