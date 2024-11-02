@@ -6,6 +6,15 @@ import { Outlet } from "react-router-dom"
 
 function App() {
 
+  useEffect(() => {
+    setIsLoading(true);
+      fetch('https://react-spotify-peach.vercel.app')
+      .then(res => res.json())
+      .then(data => {setArtistas(data), console.log(data)})
+      .catch(err => console.log(err))
+      .finally(() => setIsLoading(false))
+  },[])
+
   return (
     <>
       <Header />
