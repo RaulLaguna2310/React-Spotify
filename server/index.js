@@ -28,3 +28,14 @@ app.get("/artistas/:id", async (req, res) => {
 app.listen(3000, () => {
     console.log('Servidor Rodando')
 });
+
+app.use(cors(
+    {
+        origin: "*",
+        credentials: true
+    }
+), express.json());
+
+app.get('/', (req, res) => {
+    res.send('Olá API!');
+});
