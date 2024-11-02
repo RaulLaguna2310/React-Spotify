@@ -5,18 +5,16 @@ import SideBar from "./components/SideBar"
 import { Outlet } from "react-router-dom"
 import { useEffect, setIsLoading } from "react";
 
+useEffect(() => {
+  setIsLoading(true);
+    fetch('https://react-spotify-peach.vercel.app')
+    .then(res => res.json())
+    .then(data => {setArtistas(data), console.log(data)})
+    .catch(err => console.log(err))
+    .finally(() => setIsLoading(false))
+},[])
 
 function App() {
-
-  useEffect(() => {
-    setIsLoading(true);
-      fetch('https://react-spotify-peach.vercel.app')
-      .then(res => res.json())
-      .then(data => {setArtistas(data), console.log(data)})
-      .catch(err => console.log(err))
-      .finally(() => setIsLoading(false))
-  },[])
-
   return (
     <>
       <Header />
