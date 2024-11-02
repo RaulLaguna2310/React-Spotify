@@ -6,7 +6,7 @@ export default function CardSideBar({ capa }){
     const [artistas, setArtistas] = useState([]);
 
   useEffect(() => {
-    fetch("react-spotify-dl9h.vercel.app/artistas")
+    fetch("https://react-spotify-dl9h-k8be8azut-raul-s-projects-4b98cd39.vercel.app/artistas")
       .then((res) => res.json())
       .then((res) => setArtistas(res))
       .catch((err) => console.log(err))
